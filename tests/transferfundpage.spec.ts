@@ -19,3 +19,4 @@ test.beforeEach('Transfer fund test',async({page})=>{
 
     await transfer.verifytransfersuccess();
 });
+
