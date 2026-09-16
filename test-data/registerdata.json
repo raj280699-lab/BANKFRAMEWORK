@@ -1,0 +1,12 @@
+{
+    "firstname":"raj123",
+    "lastname":"kumar",
+    "address":"chennai",
+    "city":"virugai",
+    "state":"tamilnadu",
+    "zip":"600001",
+    "phone":"9876543210",
+    "ssn":"123456789",  
+    "username":"raj${Date.now()}",
+    "password":"password123"
+}

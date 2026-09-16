@@ -1,0 +1,13 @@
+{
+  "name": "Raj Kumar",
+  "address": {
+    "street": "Chennai",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "zipCode": "600001"
+  },
+  "phoneNumber": "9876543210",
+  "accountNumber": "12345",
+  "verifyAccount": "12345",
+  "amount": "100"
+}
