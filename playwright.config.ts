@@ -14,19 +14,25 @@ export default defineConfig({
      screenshot: 'only-on-failure',
      video: 'retain-on-failure',
      trace: 'retain-on-failure',
-      baseURL: 'https://parabank.parasoft.com/',
+      baseURL: 'https://parabank.parasoft.com/parabank',
+       // storageState: 'playwright/.auth/user.json'
   },
-
   projects: [
   {
     name: 'setup',
-    testMatch: /auth\.setup\.ts/},
+    testMatch: /auth\.setup\.ts/,
+    use: {
+      storageState: undefined
+    }
+  },
 {
     name: 'Chrome',
-    use: { browserName: 'chromium',
+    use: { 
+      browserName: 'chromium',
       storageState: 'playwright/.auth/user.json'
      },
-     dependencies: ['setup']
+    
+    dependencies: ['setup']
   },
   {
     name: 'Firefox',

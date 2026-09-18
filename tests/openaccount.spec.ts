@@ -1,21 +1,23 @@
 import {test} from '@playwright/test';
+import {homepage} from '../pages/homepage';
 import{loginpage} from '../pages/loginpage';
 import logindata from '../test-data/logindata.json';
-import {homepage} from '../pages/homepage';
 import {openaccountpage} from '../pages/openaccountpage';
 test('openaccount',async({page})=>{
    
-    await page.goto("/");
-const login = new loginpage(page);
-await login.login(logindata.validuser.username, logindata.validuser.password);
+    await page.goto('https://parabank.parasoft.com/parabank/openaccount.htm');
+// const login = new loginpage(page);
+//  await login.login(logindata.validuser.username, logindata.validuser.password);
 
 const home = new homepage(page);
-await home.clickopenaccount();
+  await home.clickopenaccount();
 
-const openaccount = new openaccountpage(page);
-await openaccount.openaccount("SAVINGS");
+   //console.log(await page.url());
 
-await openaccount.verifyaccountopened();
+ const openaccount = new openaccountpage(page);
+await openaccount.openaccount("CHECKING");
+
+ await openaccount.verifyaccountopened();
 
     
 

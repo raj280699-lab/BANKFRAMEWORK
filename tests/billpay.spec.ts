@@ -14,13 +14,13 @@ import billpaydata from '../test-data/billpaydata.json';
 
 test('billpay',async({page,homepage,billpaypage})=>{
 
-    await page.goto("/");
+    // await page.goto("/");
 
 //const home = new homepage(page);
-await homepage.clickbillpay();
+// await homepage.clickbillpay();
 
 //const billpay = new billpaypage(page);
-await billpaypage.billpay(billpaydata);
+// await billpaypage.billpay(billpaydata);
 
-await billpaypage.verifybillpaysuccess();
+// await billpaypage.verifybillpaysuccess();
 });

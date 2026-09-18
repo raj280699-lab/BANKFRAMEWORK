@@ -9,21 +9,18 @@ test('Login API', async ({ request }) => {
         'eve.holt@reqres.in',
         'cityslicka'
     );
+     console.log('Status:', response.status());
 
-    expect(response.status()).toBe(200);
+    // expect(response.status()).toBe(200);
 
     const body = await response.json();
-     
-    const token = body.token;
-    console.log(body.token);
 
-        //this is used in real project//
-    // const usersResponse = await request.get(
-    // 'https://some-api.com/users',
-    // {
-    //     headers: {
-    //         Authorization: `Bearer ${token}`
+    console.log('Response Body:', body);
+    console.log('Token:',body.token);
 
 
+    expect(response.status()).toBe(200);
     expect(body.token).toBeTruthy();
+   
+
 });
